@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mobile.css" media="screen and (max-width: 800px)">
+    <script src="https://kit.fontawesome.com/9a4e1c0fcb.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="icon/fevicon.png">
+    <title>Feedback Hub</title>
+</head>
+
+<body>
+    <div class="container">
+        <form id="feedback-form">
+            <p>Feedback Hub <i class="far fa-comment-alt fa-lg"></i></p>
+            <input id="name" name="name" type="text" placeholder="Product Name" autocomplete="off" required><br>
+            <input id="id" name="id" type="number" placeholder="Product ID" autocomplete="off" required><br>
+            <textarea id="feedback" name="feedback" rows="8" cols="80" placeholder="Your Feedback" autocomplete="off" required></textarea><br>
+            <div class="disabled" id="positive">
+                <i class="fas fa-smile fa-4x"></i>
+                <br>
+                <h4>
+                    Glad To Here That You Liked Our Product<br>
+                    Your Feedback Is Submitted
+                </h4>
+            </div>
+            <div class="disabled" id="negative">
+                <i class="fas fa-frown fa-4x"></i>
+                <br>
+                <h4>
+                    Sorry To Here That You Didn't Liked Our Product<br>
+                    Your Feedback Is Submitted
+                </h4>
+            </div>
+            <div id="loading" class="disabled">
+                <img src="images/loading.gif">
+            </div>
+            <input type="submit" value="Submit"><br>
+        </form>
+    </div>
+    <script src="script/app.js"></script>
+</body>
+
+</html>

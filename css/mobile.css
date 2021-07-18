@@ -1,0 +1,9 @@
+form {
+    width: 90vw;
+    margin: 20px auto;
+    padding: 40px 10px;
+}
+
+form input[type="submit"] {
+    width: 50%;
+}

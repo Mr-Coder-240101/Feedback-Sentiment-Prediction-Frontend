@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: radial-gradient(circle, #394d91, #b37210);
+    font-family: 'Montserrat', sans-serif;
+}
+
+form {
+    background: rgba(255, 255, 255, 0.3);
+    padding: 40px;
+    width: 60vw;
+    margin: 70px auto;
+    border-radius: 20px;
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+}
+
+form p {
+    font-weight: bolder;
+    color: #fff;
+    opacity: 0.7;
+    font-size: 1.8rem;
+    margin-top: 0;
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+form input {
+    background: transparent;
+    width: 80%;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: none;
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 25px;
+    backdrop-filter: blur(5px);
+    box-shadow: 4px 4px 60px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    font-family: Montserrat, sans-serif;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+form input:hover {
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 4px 4px 60px 8px rgba(0, 0, 0, 0.2);
+}
+
+form textarea {
+    background: transparent;
+    width: 80%;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: none;
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 25px;
+    backdrop-filter: blur(5px);
+    box-shadow: 4px 4px 60px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+form textarea:hover {
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 4px 4px 60px 8px rgba(0, 0, 0, 0.2);
+}
+
+form input[type="submit"] {
+    margin-top: 20px;
+    margin-bottom: 0px;
+    width: 30%;
+    font-size: 1rem;
+    padding: 20px;
+}
+
+form input[type="submit"]:hover {
+    cursor: pointer;
+}
+
+form input[type="submit"]:active {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+::placeholder {
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.disabled {
+    display: none;
+}
+
+#positive {
+    color: green;
+}
+
+#negative {
+    color: red;
+}
+
+#loading img {
+    display: block;
+    height: 150px;
+    width: 150px;
+    margin: auto;
+}
+
+a, input:focus, select:focus, textarea:focus, button:focus {
+    outline: none;
+}
