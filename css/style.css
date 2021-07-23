@@ -54,6 +54,51 @@ form input:hover {
     box-shadow: 4px 4px 60px 8px rgba(0, 0, 0, 0.2);
 }
 
+form select {
+    background: transparent;
+    width: 80%;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: none;
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 25px;
+    backdrop-filter: blur(5px);
+    box-shadow: 4px 4px 60px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    font-family: Montserrat, sans-serif;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+form select:hover {
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 4px 4px 60px 8px rgba(0, 0, 0, 0.2);
+}
+
+form select option {
+    background: transparent;
+    width: 80%;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 25px;
+    backdrop-filter: blur(5px);
+    box-shadow: 4px 4px 60px rgba(0, 0, 0, 0.2);
+    color: #333;
+    font-family: Montserrat, sans-serif;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+form select option:hover {
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 4px 4px 60px 8px rgba(0, 0, 0, 0.2);
+}
+
 form textarea {
     background: transparent;
     width: 80%;

@@ -4,8 +4,8 @@ const loading = document.getElementById("loading");
 const form = document.getElementById("feedback-form")
 const feedback = document.getElementById("feedback");
 const name = document.getElementById("name");
-const id = document.getElementById("id");
-const url = "https://rathodjay240101.pythonanywhere.com/get-feedback-sentiment"
+const catagory = document.getElementById("catagory");
+const url = "https://rathodjay240101.pythonanywhere.com/get-feedback-sentiment";
 
 // Add Event Listener To Disable Right Click
 document.addEventListener("contextmenu", disableRightClick);
@@ -47,38 +47,37 @@ async function onSubmitHandler(event) {
   try {
     event.preventDefault();
 
-    loading.className = "";
+    enableElement(loading);
     feedbackValue = feedback.value;
-    name.value = "";
-    id.value = "";
-    feedback.value = "";
+    catagoryValue = parseInt(catagory.value);
 
     const response = await fetch(url, {
       method : "POST",
       headers : {"Content-Type" : "application/json"},
-      body : JSON.stringify({feedback : feedbackValue})
+      body :
+          JSON.stringify({feedback : feedbackValue, catagory : catagoryValue})
     });
 
     const {sentiment} = await response.json();
 
-    loading.className = "disabled";
+    disableElement(loading);
 
     if (sentiment == 1) {
-      positive.className = "";
+      enableElement(positive);
+      setTimeout(() => disableElement(positive), 10000);
     } else {
-      negative.className = "";
+      enableElement(negative);
+      setTimeout(() => disableElement(negative), 10000);
     }
 
-    setTimeout(() => disableElement(sentiment), 10000);
   } catch (error) {
+    disableElement(loading);
+    disableElement(positive);
+    disableElement(negative);
     console.log(error);
   }
 }
 
-function disableElement(sentiment) {
-  if (sentiment == 1) {
-    positive.className = "disabled";
-  } else {
-    negative.className = "disabled";
-  }
-}
+function disableElement(element) { element.className = "disabled"; }
+
+function enableElement(element) { element.className = ""; }

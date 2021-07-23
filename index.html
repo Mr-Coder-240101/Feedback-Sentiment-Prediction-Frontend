@@ -17,9 +17,26 @@
     <div class="container">
         <form id="feedback-form">
             <p>Feedback Hub <i class="far fa-comment-alt fa-lg"></i></p>
-            <input id="name" name="name" type="text" placeholder="Product Name" autocomplete="off" required><br>
-            <input id="id" name="id" type="number" placeholder="Product ID" autocomplete="off" required><br>
-            <textarea id="feedback" name="feedback" rows="8" cols="80" placeholder="Your Feedback" autocomplete="off" required></textarea><br>
+            <input id="name" name="name" type="text" placeholder="Product Name" autocomplete="off"><br>
+            <select id="catagory">
+                <option value="none" selected disabled hidden>Product Catagory</option>
+                <option value="0">Beauty</option>
+                <option value="1">Books</option>
+                <option value="2">CD And Vinyl</option>
+                <option value="3">Clothing, Shoes And Jewelry</option>
+                <option value="4">Electronics</option>
+                <option value="5">Grocery And Food</option>
+                <option value="6">Health And Personal Care</option>
+                <option value="7">Home And Kitchen</option>
+                <option value="8">Kindle Store</option>
+                <option value="9">Mobile And Accessories</option>
+                <option value="10">Movies And TV</option>
+                <option value="11">Musical Instruments</option>
+                <option value="12">Sports And Outdoors</option>
+                <option value="13">Toys And Games</option>
+                <option value="14">Video Games</option>
+            </select>
+            <textarea id="feedback" name="feedback" rows="8" cols="80" placeholder="Your Feedback" autocomplete="off"></textarea><br>
             <div class="disabled" id="positive">
                 <i class="fas fa-smile fa-4x"></i>
                 <br>
